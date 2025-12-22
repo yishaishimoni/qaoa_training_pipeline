@@ -11,6 +11,7 @@
 name: qaoa_training_pipeline Unit Tests
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -26,7 +27,7 @@ concurrency:
 
 jobs:
   Checks:
-    if: github.repository_owner == 'qiskit-community'
+    # if: github.repository_owner == 'qiskit-community'
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
