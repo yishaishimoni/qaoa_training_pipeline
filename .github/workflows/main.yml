@@ -68,7 +68,7 @@ jobs:
         if: ${{ !cancelled() }}
         shell: bash
   training-pipeline:
-    if: github.repository_owner == 'qiskit-community'
+    # if: github.repository_owner == 'qiskit-community'
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
